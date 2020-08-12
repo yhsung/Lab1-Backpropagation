@@ -4,7 +4,7 @@ import datetime
 import os
 import logging
 import argparse
-log_filename = datetime.datetime.now().strftime("log/%Y-%m-%d_%H_%M_%S.log")
+log_filename = datetime.datetime.now().strftime(".log/%Y-%m-%d_%H_%M_%S.log")
 os.makedirs(os.path.dirname(log_filename), exist_ok=True)
 logging.basicConfig(level=logging.DEBUG,
                     format='%(asctime)s %(name)-12s %(levelname)-8s %(message)s',
@@ -72,3 +72,4 @@ x, y = generate_linear()
 show_result(x, y, y)
 x, y = generate_XOR_easy()
 show_result(x, y, y)
+
